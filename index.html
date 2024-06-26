@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MindBench: A Comprehensive Benchmark for Mind Map Structure Recognition and Analysis.">
+  <meta name="keywords" content="LMMs, Robot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>MindBench: A Comprehensive Benchmark for Mind Map Structure Recognition and Analysis</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathJax Example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .gif-gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .gif-item {
+      margin: 10px; /* Add some space around each GIF */
+    
+    }
+
+
+    .gif-item img {
+      max-width: 100%; /* Ensure the image is responsive     text-align: center; /* Center the GIF name below the image */ 
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <!-- <img src="./static/images/logo.png" alt="Logo" id="llarva-logo" style="width: 65px; vertical-align: middle; margin-right: -10px;"> -->
+            MindBench: A Comprehensive Benchmark for Mind Map Structure Recognition and Analysis
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a >Lei Chen</a>,
+            </span>
+            <span class="author-block">
+              <a>Feng Yan</a>,
+            </span>
+            <span class="author-block">
+              <a >Yujie Zhong</a>,
+            </span>
+            <span class="author-block">
+              <a >Shaoxiang Chen</a>,
+            </span>
+            <span class="author-block">
+              <a >Zequn Jie†</a>,
+            </span>
+            <span class="author-block">
+              <a >Lin Ma†</a>
+            </span>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Meituan</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/MiaSanLei/MindBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/MiaSanLei/MindBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Datasets</span>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multimodal Large Language Models (MLLM) have made significant progress in the field of document analysis. Despite this, existing benchmarks typically focus only on extracting text and simple layout information, neglecting the complex interactions between elements in structured documents such as mind maps and flowcharts. To address this issue, we introduce the new benchmark named MindBench, which not only includes meticulously constructed bilingual authentic or synthetic images, detailed annotations, evaluation metrics and baseline models, but also specifically designs five types of structured understanding and parsing tasks. These tasks include full parsing, partial parsing, position-related parsing, structured Visual Question Answering (VQA), and position-related VQA, covering key areas such as text recognition, spatial awareness, relationship discernment, and structured parsing. Extensive experimental results demonstrate the substantial potential and significant room for improvement in current models' ability to handle structured document information. We anticipate that the launch of MindBench will significantly advance research and application development in structured document analysis technology.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">The pipeline of the MindBench benchmark</h3>
+        <img style="width:900px" src="./static/images/illustration.png">
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;</p>
+          <p>
+            We design five structured understanding and parsing tasks, as illustrated in Figure, including full parsing, partial parsing, position-related parsing, structured VQA, and position-related VQA.<br><br>
+            <strong>Full parsing</strong> requires the model to return the full parsing results of the input mind map image. Mind map images often have significantly higher resolutions than typical document images, with some exceeding 10,000 pixels. This demands models capable of processing high-resolution images. Furthermore, higher resolution mind maps contain more information, resulting in longer structured data, which presents a significant challenge for existing models.<br><br>
+            <strong>Part parsing</strong> involves returning a subgraph centered around a specific node, resulting in shorter token output. However, it also poses new challenges, requiring the model to accurately identify the central theme node from the question and return its corresponding subgraph.<br><br>
+            <strong>Position-related parsing</strong> also returns a subgraph of the mind map. The difference is that this task emphasizes spatial positioning, requiring the model to integrate capabilities in text recognition, spatial awareness, and relational parsing.<br><br>
+            <strong>Structured VQA</strong> is designed to explicit learning of the components of mind maps and their interrelationships. We design multiple VQA tasks related to node kinship and hierarchical relationships.<br><br>
+            <strong>Position-related VQA</strong> is divided into two categories: recognition and grounding. In recognition tasks, the model receives node coordinates and returns answers about structural information. In grounding tasks, the model receives node descriptions and returns the bounding box coordinates of the corresponding structure.<br><br>
+            These tasks comprehensively assess the models' abilities to parse text and image information, recognize relationships between elements, and understand the overall structure.
+            &nbsp;</p><br>
+        
+        </div>
+        <div>
+          <h3 class="title is-3">The illustration of data parsing</h3>
+        <img style="width:900px" src="./static/images/parse_procedure.png">
+  
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          &nbsp;</p><br>
+        </div>
+
+        <div>
+          <h3 class="title is-3">Statistic</h3>
+        <img style="width:900px" src="./static/images/resolution_token_len.png"><br><br>
+        <img style="width:900px" src="./static/images/structure_statistic.png">
+        <div class="subtitle content has-text-justified">
+        </div>
+
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <h3 class="title is-4">Comparison with SOTA MLLMs</h3>
+        <img style="width:900px" src="./static/images/sota1.png"><br><br>
+        <img style="width:900px" src="./static/images/sota2.png">
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;
+          <p>We compare the performance of visual document understanding models on the MindBench benchmark. GPT4V shows mediocre performance, indicating challenges for commercial models in parsing complex structured documents like mind maps. Donut ranks second, outperforming UReader and TextMonkey, approaching the performance of IXC2-4KHD. IXC2-4KHD achieves the best performance due to extensive OCR data pre-training and higher resolution input. However, MLLMs still have limitations in analyzing complex mind maps. Additionally, position-related tasks pose challenges in integrating structured understanding with spatial perception.</p> 
+          &nbsp;</p>
+        </div>
+        <h3 class="title is-4"> Ablation Study</h3>
+        <img style="width:900px" src="./static/images/ablation.png">
+        <div class="subtitle content has-text-justified">
+          <p>&nbsp;</p>
+          <p>We conduct ablation experiments to analyze the impact of unified structure learning. The results show that incorporating synthetic data significantly improves the parsing performance on real mind maps. Additionally, unified structure learning effectively captures inter-node relationships and spatial information, further enhancing the accuracy of parsing.</p>
+          <!-- &nbsp;</p> -->
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> 
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{
+      title={MindBench: A Comprehensive Benchmark for Mind Map Structure Recognition and Analysis}, 
+      author={Chen, Lei and Yan, Feng and Zhong, Yujie and Chen, Shaoxiang and Jie, Zequn and Ma, Lin},
+      year={2024}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/MiaSanLei/MindBench" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="https://huggingface.co/datasets/MiaSanLei/MindBench" class="external-link" disabled>
+        <i class="far fa-images"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Acknowledgement: We extend our heartfelt appreciation to XMind, Biggerplate, and Zhixi website for providing open-source mind map data, which played a crucial role in organizing this dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
